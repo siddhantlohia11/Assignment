@@ -1,0 +1,29 @@
+<form action="/" method="GET">
+	<input type="text" name="search" >
+	<button type="submit" value="search"> Search </button>
+</form>
+
+<a href="editDetails"> Edit Movies Timings here </a>
+
+<% if (typeof allFound !== 'undefined') { %>
+
+	<% for(let i = 0; i < allFound.length; i++) { %> 
+		<h3> <%= allFound[i].name %> </h3> 
+	<% } %>	
+<% } else { %>
+
+	<% for(let i = 0; i < data.length; i++) { %> 
+		<h3> <%= data[i].name %> </h3>
+	<% } %>	
+<% } %>
+
+
+<h1> Add movie </h1>
+<form action="/addMovies" method="POST">
+	<input type="text" name="name" placeholder="Name" required>
+	<input type="text" name="description" placeholder="Description" required>
+	<input type="text" name="director" placeholder="Director" required>
+	<input type="text" name="duration" placeholder="Duration" required>
+	
+	<button type="submit"> Add </button>
+</form>

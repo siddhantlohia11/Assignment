@@ -1,0 +1,15 @@
+<h1> Edit Timing </h1>
+<% for(let i = 0; i < data.length; i++) { %> 
+		<h3> <%= data[i].name %> </h3>
+		<form action="/addDetails" method="POST">
+		<input type="text" name="date" placeholder="DD-MM-YY" required>
+		<input type="text" name="startTime" placeholder="HH-MM-SS" required>
+		<input type="text" name="endTime" placeholder="HH-MM-SS" required>
+		
+		<input type="number" name="price" placeholder="Price" required>
+		<input type="number" name="totalTickets" placeholder="Total Tickets" required>
+		
+		<button type="submit"> Change </button>
+	</form>
+	<% } %>	
+
